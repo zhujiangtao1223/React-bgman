@@ -1,5 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+# 需要配置的.idea
+./idea
 # dependencies
 /node_modules
 /.pnp

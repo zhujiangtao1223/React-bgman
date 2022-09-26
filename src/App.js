@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {BrowserRouter,Route,Routes,Link,NavLink} from 'react-router-dom'
+import { Button ,message} from 'antd';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+import 'antd/dist/antd.css'
+
+import { Login } from './pages/login/login';
+import { Admin } from './pages/admid/admid';
+//应用根组件
+const info =()=>{
+    message.info('这是一个全局提示的事件 messges')
+}
+const App =()=>{
+
+
+    return <Routes>
+            <Route path='/' element={<Login />}></Route>
+            <Route path='/admin' element={<Admin />}></Route>
+        </Routes>
+}
+class APP extends React.Component{
+
+    render(){
+        return (<div>类式组件</div>
+        )
+    }
 }
 
-export default App;
+export {App,APP}
